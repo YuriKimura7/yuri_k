@@ -6,6 +6,7 @@ table
       th 名前
       th 金額
       th ページ数
+      th ページ単価
       th 詳細
 
   tbody
@@ -14,4 +15,5 @@ table
         td = book.name
         td = book.price
         td = book.page
+        td = book.unit_with_tax
         td = link_to "詳細", book_path(book.id)
