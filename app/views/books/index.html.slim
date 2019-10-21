@@ -6,6 +6,7 @@ table
       th 名前
       th 金額
       th ページ数
+      th 詳細
 
   tbody
     - @books.each do |book|
@@ -13,3 +14,4 @@ table
         td = book.name
         td = book.price
         td = book.page
+        td = link_to "詳細", book_path(book.id)
