@@ -6,9 +6,11 @@ table
       th 名前
       th 金額
       th ページ数
+      th ページ単価
 
   tbody
     tr
       td = @book.name
       td = @book.price
       td = @book.page
+      td = @book.price / @book.page
