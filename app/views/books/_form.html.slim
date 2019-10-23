@@ -1,0 +1,12 @@
+= form_for @book do |f|
+  p
+  = f.label :name, "名前"
+  = f.text_field :name
+  p
+  = f.label :price, "金額"
+  = f.text_field :price
+  p
+  = f.label :page, "ページ数"
+  = f.text_field :page
+  p
+  = f.submit "登録"
