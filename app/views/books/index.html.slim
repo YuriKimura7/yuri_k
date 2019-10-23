@@ -17,4 +17,5 @@ table
         td = book.page
         td = book.unit_with_tax
         td = link_to "詳細", book_path(book.id)
+        td = link_to "編集", edit_book_path(book.id)
 = link_to "新規登録", new_book_path
