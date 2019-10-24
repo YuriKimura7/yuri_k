@@ -13,8 +13,11 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.save
-    redirect_to books_path
+    if @book.save
+      redirect_to books_path
+    else
+      render action: :new
+    end
   end
 
   def edit
@@ -23,8 +26,11 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
-    @book.update(book_params)
-    redirect_to book_path
+    if @book.update(book_params)
+      redirect_to book_path
+    else
+      render action: :edit
+    end
   end
 
   private

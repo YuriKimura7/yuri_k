@@ -1,4 +1,12 @@
 = form_for @book do |f|
+  - if @book.errors.any?
+    h4 エラーが#{ @book.errors.count }件あります。
+    ul
+      - @book.errors.full_messages.each do |message|
+        li = message
+      end
+  end
+
   p
   = f.label :name, "名前"
   = f.text_field :name
