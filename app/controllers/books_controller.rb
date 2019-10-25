@@ -1,10 +1,9 @@
 class BooksController < ApplicationController
   def index
-    if params[:search].present?
-      @books = Book.where(name: params[:search])
-    else
-      @books = Book.all
-    end
+    @books = Book.all
+    @books = @books.where(name: params[:search_name]) if params[:search_name].present?
+    @books = @books.where(price: params[:search_price]) if params[:search_price].present?
+    @books = @books.where(page: params[:search_page]) if params[:search_page].present?
   end
 
   def show
