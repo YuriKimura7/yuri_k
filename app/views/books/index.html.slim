@@ -3,7 +3,8 @@ h1 本一覧
 = form_with(url: books_path, method: :get,local: true) do |f|
   = f.text_field :search_name
   = f.text_field :search_price
-  = f.submit 'Search', :name => nil, :price => nil
+  = f.text_field :search_page
+  = f.submit 'Search', :name => nil, :price => nil, :page => nil
 end
 
 table
