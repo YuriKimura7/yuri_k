@@ -17,4 +17,7 @@
   = f.label :page, "ページ数"
   = f.text_field :page
   p
+  = f.label :bookshelf_id, "本棚"
+  = f.collection_select  :bookshelf_id, Bookshelf.all.order(:name), :id, :name
+  p
   = f.submit "登録"

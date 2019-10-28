@@ -7,6 +7,7 @@ table
       th 金額
       th ページ数
       th ページ単価
+      th 本棚
 
   tbody
     tr
@@ -14,3 +15,4 @@ table
       td = @book.price
       td = @book.page
       td = @book.unit_with_tax
+      td = @book.bookshelf.name
