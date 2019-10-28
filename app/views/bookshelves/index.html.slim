@@ -1,0 +1,11 @@
+h1 本棚
+
+table
+  thead
+    tr
+      th 名前
+
+  tbody
+    - @bookshelves.each do |bookshelf|
+      tr
+        td = bookshelf.name
