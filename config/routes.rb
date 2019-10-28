@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'bookshelves/index'
   resources :books, except: [:destroy]
+  resources :bookshelves, only: [:index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
